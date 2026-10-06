@@ -1048,15 +1048,12 @@ a {
         min-height: auto;
     }
 
-    .recruitment-card h3 {
-        margin-top: 30px;
-    }
-
-    .recruitment-cta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
+.recruitment-cta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
     .footer-inner {
         width: calc(100% - 32px);
