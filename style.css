@@ -162,18 +162,15 @@ a {
     justify-content: center;
 
     background:
-        radial-gradient(
-            ellipse at 65% 42%,
-            rgba(38, 102, 143, 0.24) 0%,
-            rgba(10, 24, 34, 0.15) 35%,
-            rgba(5, 8, 12, 0.95) 75%
-        ),
-        linear-gradient(
-            120deg,
-            #030507 0%,
-            #08121b 45%,
-            #05080c 100%
-        );
+    linear-gradient(
+        90deg,
+        rgba(5, 8, 12, 0.92) 0%,
+        rgba(5, 8, 12, 0.68) 35%,
+        rgba(5, 8, 12, 0.25) 70%,
+        rgba(5, 8, 12, 0.55) 100%
+    ),
+    url("images/hero.jpg") 0% center / cover no-repeat;
+
 }
 
 /*
@@ -192,46 +189,18 @@ a {
 
     background:
         linear-gradient(
-            90deg,
-            rgba(5, 8, 12, 1) 0%,
-            rgba(5, 8, 12, 0.78) 25%,
-            rgba(5, 8, 12, 0.32) 60%,
-            rgba(5, 8, 12, 0.8) 100%
-        ),
-        radial-gradient(
-            ellipse at 70% 45%,
-            rgba(78, 164, 213, 0.18),
-            transparent 48%
+            to bottom,
+            rgba(5, 8, 12, 0.15),
+            transparent 25%,
+            transparent 65%,
+            rgba(5, 8, 12, 0.9) 100%
         );
 
     pointer-events: none;
 }
 
 .hero::after {
-    content: "";
-
-    position: absolute;
-    width: 700px;
-    height: 700px;
-
-    top: 50%;
-    right: 2%;
-
-    transform: translateY(-50%);
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(121, 202, 255, 0.1) 0%,
-            rgba(121, 202, 255, 0.025) 38%,
-            transparent 70%
-        );
-
-    filter: blur(10px);
-
-    pointer-events: none;
+    content: none;
 }
 
 .hero-overlay {
