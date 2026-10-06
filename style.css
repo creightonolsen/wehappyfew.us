@@ -804,8 +804,9 @@ a {
     justify-content: center;
     gap: 10px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0;
     padding: 11px 18px;
+    box-sizing: border-box;
     background: #5865F2;
     color: #ffffff;
     border: 1px solid #5865F2;
@@ -819,10 +820,11 @@ a {
 }
 
 .discord-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
     display: block;
+    object-fit: contain;
 }
 
 /* =========================================
