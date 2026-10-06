@@ -21,7 +21,7 @@ function updateCountdown() {
     // Launch has arrived.
     if (difference <= 0) {
 
-        daysElement.textContent = "000";
+        daysElement.textContent = "00";
         hoursElement.textContent = "00";
         minutesElement.textContent = "00";
         secondsElement.textContent = "00";
@@ -48,7 +48,7 @@ function updateCountdown() {
 
 
     daysElement.textContent =
-        String(days).padStart(3, "0");
+        String(days).padStart(2, "0");
 
     hoursElement.textContent =
         String(hours).padStart(2, "0");

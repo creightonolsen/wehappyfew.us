@@ -81,44 +81,6 @@ a {
 }
 
 .nav-container {
-    width: calc(100% - 48px);
-    max-width: 1200px;
-    height: 72px;
-    margin: 0 auto;
-
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.nav-links {
-    display: flex !important;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-links a {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-.nav-discord {
-    color: #05080c !important;
-    background: #79caff;
-    padding: 9px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.nav-container {
     width: min(var(--max-width), calc(100% - 48px));
     height: 72px;
     margin: 0 auto;
@@ -212,17 +174,9 @@ a {
         rgba(5, 8, 12, 0.25) 70%,
         rgba(5, 8, 12, 0.55) 100%
     ),
-    url("Images/hero.png") center center / cover no-repeat;
+    url("Images/hero.jpg") 85% center / cover no-repeat;
 
 }
-
-/*
-   TEMPORARY HERO ARTWORK AREA
-
-   We'll replace this with the actual
-   fantasy artwork after the page shell
-   is working.
-*/
 
 .hero::before {
     content: "";
@@ -473,65 +427,23 @@ a {
     line-height: 1.8;
 }
 
-
-/* =========================================
-   ABOUT
-   ========================================= */
-
-.about-section {
-    background:
-        radial-gradient(
-            ellipse at 80% 50%,
-            rgba(27, 75, 104, 0.08),
-            transparent 55%
-        ),
-        var(--bg);
+.hero-stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin-top: 48px;
 }
 
-.stat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    max-width: 850px;
-
-    margin-top: 70px;
-
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+.hero-stat-grid .stat {
+    padding: 22px 20px;
 }
 
-.stat {
-    padding: 28px 24px;
-
-    border-right: 1px solid var(--border);
+.hero-stat-grid .stat-value {
+    font-size: 18px;
 }
 
-.stat:last-child {
-    border-right: none;
+.hero-stat-grid .stat-label {
+    font-size: 9px;
 }
-
-.stat-value {
-    display: block;
-
-    color: var(--blue-bright);
-
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-}
-
-.stat-label {
-    display: block;
-
-    margin-top: 4px;
-
-    color: var(--text-dim);
-
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-}
-
 
 /* =========================================
    COUNTDOWN
@@ -638,125 +550,266 @@ a {
     font-size: 14px;
 }
 
-```html
-<!-- RECRUITMENT -->
-<section id="recruitment" class="section recruitment-section">
+/* RECRUITMENT */
 
-    <div class="section-inner">
+.spec-recruitment {
+    width: 100%;
+}
 
-        <p class="section-label">RECRUITMENT</p>
+.spec-role-section {
+    margin-top: 28px;
+}
 
-        <h2>There's room at the table.</h2>
+.spec-role-label {
+    margin: 0 0 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
 
-        <div class="section-rule"></div>
+.tank-label {
+    color: #e8c66a;
+}
 
-        <p class="large-copy">
-            We're recruiting players of all classes.
-        </p>
+.healer-label {
+    color: #79caff;
+}
 
-        <p class="body-copy">
-            Whether you're a longtime WoW player or finding your way
-            back to Azeroth, there's a place here.
-        </p>
+.dps-label {
+    color: #8fa8bd;
+}
 
-        <div class="class-recruitment">
+.class-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 28px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 32px auto 0;
+}
 
-            <p class="class-recruitment-label">
-                WE'RE CURRENTLY RECRUITING FOR:
-            </p>
+.class-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 28px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 32px auto 0;
+}
 
-            <div class="class-grid">
+.class-spec-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
 
-                <img src="Images/druid.png" alt="Druid">
-                <img src="Images/hunter.png" alt="Hunter">
-                <img src="Images/mage.png" alt="Mage">
-                <img src="Images/paladin.png" alt="Paladin">
-                <img src="Images/priest.png" alt="Priest">
-                <img src="Images/rogue.png" alt="Rogue">
-                <img src="Images/shaman.png" alt="Shaman">
-                <img src="Images/warlock.png" alt="Warlock">
-                <img src="Images/warrior.png" alt="Warrior">
+.class-spec-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
 
-            </div>
+.class-name {
+    margin: 0 0 10px;
 
-        </div>
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1;
 
-        <div class="recruitment-info">
+    text-align: center;
+    text-transform: uppercase;
+}
 
-            <div class="recruitment-card">
-                <h3>21+</h3>
-                <p>
-                    A guild for adult players.
-                </p>
-            </div>
+/* CLASS NAME COLORS */
 
-            <div class="recruitment-card">
-                <h3>PVE</h3>
-                <p>
-                    Enjoy the world now. Raid when the time is right.
-                </p>
-            </div>
+.class-spec-row:nth-child(1) .class-name {
+    color: #ff7c0a;
+}
 
-        </div>
+.class-spec-row:nth-child(2) .class-name {
+    color: #aad372;
+}
 
-        <div class="recruitment-cta">
+.class-spec-row:nth-child(3) .class-name {
+    color: #68ccff;
+}
 
-            <p>
-                INTERESTED IN JOINING US?
-            </p>
+.class-spec-row:nth-child(4) .class-name {
+    color: #f58cba;
+}
 
-            <a
-                href="https://discord.gg/CrdwSXDQe"
-                class="button button-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                JOIN THE DISCORD
-            </a>
+.class-spec-row:nth-child(5) .class-name {
+    color: #ffffff;
+}
 
-        </div>
+.class-spec-row:nth-child(6) .class-name {
+    color: #fff468;
+}
 
-    </div>
+.class-spec-row:nth-child(7) .class-name {
+    color: #0070dd;
+}
+
+.class-spec-row:nth-child(8) .class-name {
+    color: #a330c9;
+}
+
+.class-spec-row:nth-child(9) .class-name {
+    color: #c69b6d;
+}
+
+.class-specs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex: 0 0 auto;
+    min-width: 0;
+
+    padding: 8px 12px 16px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* CLASS COLORS */
+
+.class-spec-row:nth-child(1) .class-specs {
+    background: rgba(255, 124, 10, 0.10);
+    border-color: rgba(255, 124, 10, 0.28);
+}
+
+.class-spec-row:nth-child(2) .class-specs {
+    background: rgba(170, 211, 114, 0.10);
+    border-color: rgba(170, 211, 114, 0.28);
+}
+
+.class-spec-row:nth-child(3) .class-specs {
+    background: rgba(104, 204, 255, 0.10);
+    border-color: rgba(104, 204, 255, 0.28);
+}
+
+.class-spec-row:nth-child(4) .class-specs {
+    background: rgba(245, 140, 186, 0.10);
+    border-color: rgba(245, 140, 186, 0.30);
+}
+
+.class-spec-row:nth-child(5) .class-specs {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.class-spec-row:nth-child(6) .class-specs {
+    background: rgba(255, 244, 104, 0.10);
+    border-color: rgba(255, 244, 104, 0.28);
+}
+
+.class-spec-row:nth-child(7) .class-specs {
+    background: rgba(0, 112, 221, 0.12);
+    border-color: rgba(0, 112, 221, 0.32);
+}
+
+.class-spec-row:nth-child(8) .class-specs {
+    background: rgba(135, 74, 175, 0.12);
+    border-color: rgba(135, 74, 175, 0.32);
+}
+
+.class-spec-row:nth-child(9) .class-specs {
+    background: rgba(198, 155, 109, 0.11);
+    border-color: rgba(198, 155, 109, 0.30);
+}
+
+.spec-entry:hover {
+    transform: translateY(-3px);
+}
+
+.spec-entry:hover img {
+    filter: drop-shadow(0 0 10px rgba(121, 202, 255, 0.55));
+}
+
+/* TOOLTIP */
+
+.spec-entry::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 9px;
+    background: #0b121a;
+    border: 1px solid rgba(121, 202, 255, 0.25);
+    border-radius: 4px;
+    color: #dce8f2;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.spec-entry:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .class-spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .class-spec-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .class-spec-row {
+        justify-content: center;
+    }
+}
 
 .recruitment-cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
     width: 100%;
     margin-top: 48px;
     text-align: center;
 }
 
 .recruitment-cta p {
-    margin: 0;
+    margin: 0 0 20px;
     color: #79caff;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 0.04em;
     text-align: center;
-    text-shadow:
-        0 0 6px rgba(255, 220, 100, 0.95),
-        0 0 16px rgba(255, 200, 70, 0.80),
-        0 0 32px rgba(255, 180, 40, 0.55),
-        0 0 55px rgba(255, 160, 20, 0.30);
 }
 
 .discord-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     width: fit-content;
     margin: 0 auto;
-
+    padding: 11px 18px;
     background: #5865F2;
     color: #ffffff;
-
     border: 1px solid #5865F2;
+    border-radius: 4px;
 }
 
 .discord-button:hover {
@@ -769,9 +822,8 @@ a {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
+    display: block;
 }
-
-</section>
 
 /* =========================================
    LEADERSHIP
@@ -790,38 +842,21 @@ a {
 .leadership-card {
     display: flex;
     align-items: center;
-    gap: 25px;
-
-    max-width: 560px;
-
-    margin-top: 55px;
-    padding: 30px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(121, 202, 255, 0.025);
+    justify-content: center;
+    gap: 40px;
+    padding: 32px;
 }
 
 .leader-mark {
-    width: 72px;
-    height: 72px;
+    flex-shrink: 0;
+}
 
+.leader-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    flex-shrink: 0;
-
-    border: 1px solid var(--border-strong);
-
-    color: var(--blue-bright);
-
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-
-    box-shadow:
-        inset 0 0 25px rgba(121, 202, 255, 0.04);
+    text-align: center;
 }
 
 .leader-name {
@@ -840,6 +875,29 @@ a {
     text-transform: uppercase;
 }
 
+.leadership-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(121, 202, 255, 0.35);
+    box-shadow: 0 0 24px rgba(121, 202, 255, 0.12);
+}
+
+.leader-email-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #79caff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.leader-email-link:hover {
+    color: #a8ddff;
+}
 
 /* =========================================
    FINAL CTA
@@ -947,29 +1005,6 @@ a {
     text-align: center;
 }
 
-.class-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 18px;
-    align-items: center;
-    justify-items: center;
-}
-
-.class-grid img {
-    width: 58px;
-    height: 58px;
-    object-fit: contain;
-    opacity: 0.9;
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-}
-
-.class-grid img:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-}
-
 @media (max-width: 800px) {
 
     .nav-container {
@@ -1040,14 +1075,6 @@ a {
         font-size: clamp(2rem, 10vw, 4rem);
     }
 
-    .recruitment-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .recruitment-card {
-        min-height: auto;
-    }
-
 .recruitment-cta {
     flex-direction: column;
     align-items: center;
@@ -1065,6 +1092,9 @@ a {
     }
 }
 
+.hero-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 
 @media (max-width: 480px) {
 
@@ -1086,50 +1116,109 @@ a {
     }
 }
 
-.recruitment-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 28px;
-}
-
-.recruitment-card {
-    padding: 24px;
-    background: rgba(11, 18, 26, 0.65);
-    border: 1px solid rgba(121, 202, 255, 0.10);
-    border-radius: 6px;
-}
-
-.recruitment-card h3 {
-    margin: 0 0 8px;
-    color: #79caff;
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-}
-
-.recruitment-card p {
-    margin: 0;
-    color: #b8c7d6;
-    line-height: 1.6;
-}
-
 @media (max-width: 700px) {
 
     .class-recruitment {
         padding: 20px 14px 22px;
     }
 
-    .class-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
+}
 
-    .class-grid img {
-        width: 48px;
-        height: 48px;
+@media (max-width: 600px) {
+    .leadership-card {
+        flex-direction: column;
+        gap: 24px;
     }
+}
 
-    .recruitment-info {
-        grid-template-columns: 1fr;
-    }
+.spec-entry {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 82px;
+    width: 82px;
+    height: 72px;
+
+    padding: 6px 11px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.spec-entry img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* ROLE RIBBONS */
+
+.spec-entry.tank-spec::before {
+    content: "TANK";
+
+    position: absolute;
+    left: 50%;
+    bottom: -13px;
+
+    transform: translateX(-50%);
+
+    padding: 2px 7px;
+
+    background: #d6a637;
+    color: #120f06;
+
+    border-radius: 2px;
+
+    font-size: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.spec-entry.healer-spec::before {
+    content: "HEALER";
+
+    position: absolute;
+    left: 50%;
+    bottom: -13px;
+
+    transform: translateX(-50%);
+
+    padding: 2px 7px;
+
+    background: #79caff;
+    color: #061019;
+
+    border-radius: 2px;
+
+    font-size: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.hero-stat-grid .stat,
+.hero-stat-grid .stat-value,
+.hero-stat-grid .stat-label {
+    text-align: center;
 }
