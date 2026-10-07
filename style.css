@@ -113,43 +113,17 @@ a {
 
 .nav-links a {
     transition:
-        color 0.2s ease,
-        text-shadow 0.2s ease;
+        color 0.18s ease,
+        opacity 0.18s ease,
+        text-shadow 0.18s ease;
 }
 
 .nav-links a:hover {
-    color: var(--blue-bright);
+    color: #ffffff;
+    opacity: 1;
     text-shadow: 0 0 18px rgba(121, 202, 255, 0.35);
 }
 
-.nav-discord {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    padding: 8px 14px;
-
-    background: #5865F2;
-    color: #ffffff;
-
-    border: 1px solid #5865F2;
-    border-radius: 4px;
-
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.nav-discord:hover {
-    background: #4752C4;
-    border-color: #4752C4;
-    color: #ffffff;
-}
 
 /* =========================================
    HERO
@@ -167,15 +141,14 @@ a {
     justify-content: center;
 
     background:
-    linear-gradient(
-        90deg,
-        rgba(5, 8, 12, 0.92) 0%,
-        rgba(5, 8, 12, 0.68) 35%,
-        rgba(5, 8, 12, 0.25) 70%,
-        rgba(5, 8, 12, 0.55) 100%
-    ),
-    url("Images/hero.jpg") 85% center / cover no-repeat;
-
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 12, 0.92) 0%,
+            rgba(5, 8, 12, 0.68) 35%,
+            rgba(5, 8, 12, 0.25) 70%,
+            rgba(5, 8, 12, 0.55) 100%
+        ),
+        url("Images/hero.jpg") 85% center / cover no-repeat;
 }
 
 .hero::before {
@@ -285,6 +258,44 @@ a {
     margin-top: 34px;
 }
 
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+
+    transition:
+        transform 0.18s ease,
+        filter 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+
 /* DISCORD BUTTON */
 
 .discord-button {
@@ -309,56 +320,28 @@ a {
     color: #ffffff;
 }
 
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.discord-icon {
+    display: block;
 
-    min-height: 48px;
-    padding: 0 24px;
+    width: 18px;
+    height: 18px;
 
-    border-radius: 2px;
+    min-width: 18px;
+    min-height: 18px;
 
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.13em;
+    max-width: 18px;
+    max-height: 18px;
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
+    flex: 0 0 18px;
+
+    object-fit: contain;
+    object-position: center;
 }
 
-.button:hover {
-    transform: translateY(-2px);
-}
 
-.button-primary {
-    color: #041018;
-    background: var(--blue);
-
-    box-shadow:
-        0 0 25px rgba(121, 202, 255, 0.16);
-}
-
-.button-primary:hover {
-    background: var(--blue-bright);
-
-    box-shadow:
-        0 0 35px rgba(121, 202, 255, 0.28);
-}
-
-.button-secondary {
-    color: var(--text);
-    border: 1px solid var(--border-strong);
-    background: rgba(5, 8, 12, 0.35);
-}
-
-.button-secondary:hover {
-    background: rgba(121, 202, 255, 0.08);
-    border-color: var(--blue);
-}
+/* =========================================
+   HERO SCROLL
+   ========================================= */
 
 .hero-scroll {
     position: absolute;
@@ -440,34 +423,6 @@ a {
     line-height: 1.45;
 }
 
-.body-copy {
-    max-width: 700px;
-
-    margin-top: 22px;
-
-    color: var(--text-muted);
-
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.hero-stat-grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1000px;
-    margin-top: 48px;
-}
-
-.hero-stat-grid .stat {
-    padding: 22px 20px;
-}
-
-.hero-stat-grid .stat-value {
-    font-size: 18px;
-}
-
-.hero-stat-grid .stat-label {
-    font-size: 9px;
-}
 
 /* =========================================
    COUNTDOWN
@@ -574,19 +529,26 @@ a {
     font-size: 14px;
 }
 
-/* RECRUITMENT */
+
+/* =========================================
+   RECRUITMENT
+   ========================================= */
 
 .class-recruitment {
     margin-top: 50px;
     padding: 24px 28px 32px;
+
     background: rgba(11, 18, 26, 0.55);
+
     border: 1px solid rgba(121, 202, 255, 0.08);
     border-radius: 6px;
 }
 
 .class-recruitment-label {
     margin: 0 0 28px;
+
     color: #79caff;
+
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -594,14 +556,18 @@ a {
 }
 
 
-/* CLASS GRID */
+/* =========================================
+   CLASS GRID
+   ========================================= */
 
 .class-spec-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 28px;
+
     width: 100%;
     max-width: 1000px;
+
     margin: 0 auto;
 }
 
@@ -609,11 +575,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     min-width: 0;
 }
 
 .class-name {
     margin: 0 0 10px;
+
     font-size: 0.86rem;
     font-weight: 800;
     letter-spacing: 0.16em;
@@ -623,7 +591,9 @@ a {
 }
 
 
-/* CLASS NAME COLORS */
+/* =========================================
+   CLASS NAME COLORS
+   ========================================= */
 
 .class-spec-row:nth-child(1) .class-name {
     color: #ff7c0a;
@@ -662,15 +632,19 @@ a {
 }
 
 
-/* SPEC GROUPS */
+/* =========================================
+   SPEC GROUPS
+   ========================================= */
 
 .class-specs {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+
     min-width: 0;
     padding: 7px 10px 15px;
+
     border: 1px solid transparent;
     border-radius: 7px;
 }
@@ -724,7 +698,9 @@ a {
 }
 
 
-/* SPEC ENTRY */
+/* =========================================
+   SPEC ENTRY
+   ========================================= */
 
 .spec-entry {
     position: relative;
@@ -738,7 +714,6 @@ a {
     height: 70px;
 
     padding: 5px 8px;
-    box-sizing: border-box;
 
     border: 1px solid transparent;
     border-radius: 7px;
@@ -759,6 +734,18 @@ a {
         box-shadow 0.2s ease;
 }
 
+.spec-entry:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.spec-entry {
+    cursor: pointer;
+}
+
+.spec-entry:hover .spec-icon {
+    filter: brightness(1.08);
+}
 
 /* SPEC ICON */
 
@@ -773,6 +760,7 @@ a {
 
     z-index: 2;
 }
+
 
 /* ROLE ICON */
 
@@ -798,7 +786,10 @@ a {
     pointer-events: none;
 }
 
-/* ROLE RIBBONS */
+
+/* =========================================
+   ROLE RIBBONS
+   ========================================= */
 
 .spec-entry.tank-spec::before,
 .spec-entry.healer-spec::before {
@@ -816,7 +807,7 @@ a {
     z-index: 1;
 
     box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.35);
+        0 3px 5px rgba(0, 0, 0, 0.25);
 
     clip-path: polygon(
         0 0,
@@ -833,31 +824,38 @@ a {
 /* TANK RIBBON */
 
 .spec-entry.tank-spec::before {
-    background: #174A8B;
+    background: linear-gradient(
+        to right,
+        #123C73,
+        #174A8B 45%,
+        #1B559B
+    );
 
     border-left: 1px solid #2865A8;
     border-right: 1px solid #2865A8;
     border-bottom: 1px solid #2865A8;
-
-    box-shadow:
-        0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
 
 /* HEALER RIBBON */
 
 .spec-entry.healer-spec::before {
-    background: #287A4B;
+    background: linear-gradient(
+        to right,
+        #21643E,
+        #287A4B 45%,
+        #318856
+    );
 
     border-left: 1px solid #3C9662;
     border-right: 1px solid #3C9662;
     border-bottom: 1px solid #3C9662;
-
-    box-shadow:
-        0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
-/* TOOLTIP */
+
+/* =========================================
+   SPEC TOOLTIP
+   ========================================= */
 
 .spec-entry::after {
     content: attr(data-tooltip);
@@ -895,16 +893,22 @@ a {
     opacity: 1;
 }
 
-/* RECRUITMENT CTA */
+
+/* =========================================
+   RECRUITMENT CTA
+   ========================================= */
 
 .recruitment-cta {
     margin-top: 34px;
+
     text-align: center;
 }
 
 .recruitment-cta p {
     margin: 0 0 14px;
+
     color: #9fb2c2;
+
     font-size: 0.9rem;
 }
 
@@ -912,46 +916,6 @@ a {
     width: auto;
 }
 
-.discord-icon {
-    display: block;
-
-    width: 18px;
-    height: 18px;
-
-    min-width: 18px;
-    min-height: 18px;
-
-    max-width: 18px;
-    max-height: 18px;
-
-    flex: 0 0 18px;
-
-    object-fit: contain;
-    object-position: center;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1000px) {
-    .class-spec-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-    .class-recruitment {
-        padding: 22px 16px 28px;
-    }
-
-    .class-spec-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .class-spec-row {
-        justify-content: center;
-    }
-}
 
 /* =========================================
    LEADERSHIP
@@ -972,6 +936,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 40px;
+
     padding: 32px;
 }
 
@@ -984,6 +949,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 }
 
@@ -1006,18 +972,26 @@ a {
 .leadership-photo {
     width: 120px;
     height: 120px;
+
     object-fit: cover;
     border-radius: 50%;
+
     border: 1px solid rgba(121, 202, 255, 0.35);
-    box-shadow: 0 0 24px rgba(121, 202, 255, 0.12);
+
+    box-shadow:
+        0 0 24px rgba(121, 202, 255, 0.12);
 }
 
 .leader-email-link {
     display: inline-block;
+
     margin-top: 16px;
+
     color: #79caff;
+
     text-decoration: underline;
     text-underline-offset: 3px;
+
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -1025,61 +999,6 @@ a {
 
 .leader-email-link:hover {
     color: #a8ddff;
-}
-
-/* =========================================
-   FINAL CTA
-   ========================================= */
-
-.final-cta {
-    position: relative;
-
-    padding: 150px 0;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(45, 117, 158, 0.15),
-            transparent 55%
-        ),
-        #04070a;
-}
-
-.final-cta::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(121, 202, 255, 0.04) 50%,
-            transparent 100%
-        );
-
-    pointer-events: none;
-}
-
-.final-cta-inner {
-    position: relative;
-    z-index: 2;
-
-    width: min(var(--max-width), calc(100% - 48px));
-    margin: 0 auto;
-}
-
-.final-cta h2 {
-    margin: 15px 0 32px;
-
-    font-size: clamp(2.8rem, 6vw, 5.5rem);
-    line-height: 1;
-    letter-spacing: -0.05em;
 }
 
 
@@ -1094,56 +1013,42 @@ a {
 }
 
 .footer-inner {
-    width: min(var(--max-width), calc(100% - 48px));
-    min-height: 80px;
-
-    margin: 0 auto;
-
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 8px 250px;
+}
 
+.footer-inner > span {
+    color: var(--blue);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.legal-disclaimer {
+    flex-basis: 100%;
+    margin: 8px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(121, 202, 255, 0.08);
     color: var(--text-dim);
-
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-}
-
-/* INTERACTION POLISH */
-
-.button {
-    transition:
-        transform 0.18s ease,
-        filter 0.18s ease,
-        box-shadow 0.18s ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.08);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
-}
-
-.button:active {
-    transform: translateY(0);
-}
-
-.nav-links a {
-    transition:
-        color 0.18s ease,
-        opacity 0.18s ease;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
-    opacity: 1;
+    font-size: 0.65rem;
+    line-height: 1.5;
+    text-align: center;
 }
 
 /* =========================================
    MOBILE
    ========================================= */
+
+@media (max-width: 1000px) {
+    .class-spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media (max-width: 800px) {
 
@@ -1155,13 +1060,8 @@ a {
         display: none;
     }
 
-    .nav-discord {
-        padding: 8px 12px;
-    }
-
     .hero-content,
-    .section-inner,
-    .final-cta-inner {
+    .section-inner {
         width: calc(100% - 32px);
     }
 
@@ -1181,21 +1081,6 @@ a {
         padding: 85px 0;
     }
 
-    .stat-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 50px;
-    }
-
-    .stat {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .stat:last-child {
-        border-bottom: none;
-    }
-
     .countdown-grid {
         gap: 3px;
     }
@@ -1207,20 +1092,12 @@ a {
 
     .countdown-separator {
         margin: 0 2px 22px;
-
         font-size: 24px;
     }
 
     .countdown-number {
         font-size: clamp(2rem, 10vw, 4rem);
     }
-
-.recruitment-cta {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
 
     .footer-inner {
         width: calc(100% - 32px);
@@ -1232,9 +1109,32 @@ a {
     }
 }
 
-.hero-stat-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+@media (max-width: 700px) {
+
+    .class-recruitment {
+        padding: 20px 14px 22px;
+    }
+
+    .class-spec-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .class-spec-row {
+        justify-content: center;
+    }
 }
+
+
+@media (max-width: 600px) {
+
+    .leadership-card {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
 
 @media (max-width: 480px) {
 
@@ -1243,13 +1143,13 @@ a {
         align-items: stretch;
     }
 
-.button {
-    width: 100%;
-}
+    .button {
+        width: 100%;
+    }
 
-.recruitment-cta .discord-button {
-    width: auto;
-}
+    .recruitment-cta .discord-button {
+        width: auto;
+    }
 
     .countdown-date {
         font-size: 10px;
@@ -1258,25 +1158,4 @@ a {
     .leadership-card {
         padding: 22px;
     }
-}
-
-@media (max-width: 700px) {
-
-    .class-recruitment {
-        padding: 20px 14px 22px;
-    }
-
-}
-
-@media (max-width: 600px) {
-    .leadership-card {
-        flex-direction: column;
-        gap: 24px;
-    }
-}
-
-.hero-stat-grid .stat,
-.hero-stat-grid .stat-value,
-.hero-stat-grid .stat-label {
-    text-align: center;
 }
