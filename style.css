@@ -376,16 +376,13 @@ a {
         );
 }
 
-
 /* =========================================
    GENERAL SECTIONS
    ========================================= */
 
 .section {
     position: relative;
-
-    padding: 120px 0;
-
+    padding: 64px 0;
     border-top: 1px solid rgba(121, 202, 255, 0.07);
 }
 
@@ -395,8 +392,7 @@ a {
 }
 
 .section h2 {
-    margin-top: 12px;
-
+    margin-top: 8px;
     font-size: clamp(2.5rem, 5vw, 4.8rem);
     line-height: 1;
     letter-spacing: -0.045em;
@@ -405,24 +401,17 @@ a {
 .section-rule {
     width: 70px;
     height: 1px;
-
-    margin: 28px 0;
-
+    margin: 20px 0;
     background: var(--blue);
-
-    box-shadow:
-        0 0 14px rgba(121, 202, 255, 0.45);
+    box-shadow: 0 0 14px rgba(121, 202, 255, 0.45);
 }
 
 .large-copy {
     max-width: 800px;
-
     color: var(--text);
-
     font-size: clamp(20px, 3vw, 29px);
     line-height: 1.45;
 }
-
 
 /* =========================================
    COUNTDOWN
@@ -457,7 +446,7 @@ a {
 }
 
 .countdown-inner {
-    text-align: center;
+    text-align: left;
 }
 
 .countdown-inner .section-label {
@@ -465,21 +454,14 @@ a {
 }
 
 .countdown-date {
-    margin-top: 20px;
-
-    color: var(--text-muted);
-
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
+    margin-top: 14px;
 }
 
 .countdown-grid {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    margin-top: 55px;
+    justify-content: flex-start;
+    margin-top: 32px;
 }
 
 .countdown-unit {
@@ -522,11 +504,10 @@ a {
 }
 
 .countdown-message {
-    margin-top: 42px;
-
+    margin-top: 28px;
     color: var(--text-muted);
-
     font-size: 14px;
+    line-height: 1.65;
 }
 
 
@@ -1018,6 +999,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 8px 250px;
+    padding: 12px
 }
 
 .footer-inner > span {
@@ -1031,12 +1013,12 @@ a {
 .legal-disclaimer {
     flex-basis: 100%;
     margin: 8px 0 0;
-    padding-top: 10px;
     border-top: 1px solid rgba(121, 202, 255, 0.08);
     color: var(--text-dim);
     font-size: 0.65rem;
     line-height: 1.5;
     text-align: center;
+    padding: 12px
 }
 
 /* =========================================
@@ -1078,7 +1060,7 @@ a {
     }
 
     .section {
-        padding: 85px 0;
+        padding: 44px 0;
     }
 
     .countdown-grid {
