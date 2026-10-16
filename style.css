@@ -137,6 +137,40 @@ a {
 }
 
 
+/* MOBILE CALENDAR ICON */
+
+.mobile-calendar-link {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+    color: var(--blue);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+
+    transition:
+        color 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.mobile-calendar-link:hover {
+    color: var(--blue-bright);
+    background: rgba(121, 202, 255, 0.08);
+    border-color: var(--blue);
+}
+
+.mobile-calendar-link svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+
 /* =========================================
    HERO
    ========================================= */
@@ -1238,6 +1272,12 @@ background:
     .nav-links {
         display: none;
     }
+
+
+    .mobile-calendar-link {
+        display: inline-flex;
+    }
+
 
     .hero-content,
     .section-inner {
