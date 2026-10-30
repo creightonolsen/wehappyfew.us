@@ -4,7 +4,7 @@
 
 // November 4, 2026 at 1:00 PM Central Time.
 // On this date, Central Time is CST (UTC-6).
-const launchDate = new Date("2026-11-04T19:00:00Z");
+const launchDate = new Date("2026-11-04T21:00:00Z");
 
 const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
