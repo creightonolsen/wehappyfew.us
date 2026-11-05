@@ -494,98 +494,37 @@ a:focus-visible {
 }
 
 /* =========================================
-   COUNTDOWN
+   ST. CRISPIN'S DAY
    ========================================= */
 
-.countdown-section {
+/* =========================================
+   ST. CRISPIN'S DAY
+   ========================================= */
+
+.crispin-section {
     overflow: hidden;
     border-top-color: rgba(121, 202, 255, 0.28);
-
     background: var(--section-gradient);
 }
 
-.countdown-section::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(121, 202, 255, 0.035),
-            transparent
-        );
-
-    pointer-events: none;
+.crispin-inner {
+    /* Uses the same width and alignment as other sections */
 }
 
-.countdown-inner {
-    text-align: left;
-}
-
-.countdown-inner .section-label {
-    display: block;
-}
-
-.countdown-date {
-    margin-top: 14px;
-}
-
-.countdown-grid {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 32px;
-}
-
-.countdown-unit {
-    min-width: 130px;
-}
-
-.countdown-number {
-    display: block;
-
-    color: var(--blue-bright);
-
-    font-size: clamp(3rem, 7vw, 6rem);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.06em;
-
-    text-shadow:
-        0 0 35px rgba(121, 202, 255, 0.18);
-}
-
-.countdown-label {
-    display: block;
-
-    margin-top: 12px;
-
-    color: var(--text-dim);
-
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-}
-
-.countdown-separator {
-    margin: 0 12px 25px;
-
-    color: var(--blue-dark);
-
-    font-size: 40px;
-    font-weight: 300;
-}
-
-.countdown-message {
-    margin-top: 28px;
+.crispin-speech {
+    max-width: 900px;
     color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.65;
+    font-size: 17px;
+    line-height: 1.85;
 }
 
+.crispin-speech p {
+    margin-bottom: 24px;
+}
+
+.crispin-speech p:last-child {
+    margin-bottom: 0;
+}
 
 /* =========================================
    RECRUITMENT
@@ -1300,23 +1239,14 @@ background:
         padding: 44px 0;
     }
 
-    .countdown-grid {
-        gap: 3px;
-    }
+.crispin-speech {
+    font-size: 15px;
+    line-height: 1.8;
+}
 
-    .countdown-unit {
-        min-width: 0;
-        flex: 1;
-    }
-
-    .countdown-separator {
-        margin: 0 2px 22px;
-        font-size: 24px;
-    }
-
-    .countdown-number {
-        font-size: clamp(2rem, 10vw, 4rem);
-    }
+.crispin-speech p {
+    margin-bottom: 20px;
+}
 
     .footer-inner {
         width: calc(100% - 32px);
@@ -1327,7 +1257,6 @@ background:
         text-align: center;
     }
 }
-
 
 @media (max-width: 700px) {
 
